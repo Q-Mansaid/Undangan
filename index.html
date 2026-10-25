@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Undangan Pernikahan | Alya & Raka</title>
+<style>
+:root{--cream:#f8f4ec;--green:#65765d;--gold:#b99a5b;--ink:#34372f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.7}
+button,a{font:inherit}a{color:inherit}
+.cover{min-height:100svh;display:grid;place-items:center;text-align:center;padding:32px 20px;background:linear-gradient(#f8f4ecdd,#f8f4ecef),radial-gradient(ellipse at top,#dce4d4,transparent 65%)}
+.frame{max-width:650px;width:100%;border:1px solid var(--gold);padding:clamp(28px,6vw,64px) 22px;position:relative}
+.kicker{letter-spacing:.22em;text-transform:uppercase;font:12px Arial,sans-serif;color:var(--green)}
+h1{font-size:clamp(42px,9vw,72px);font-weight:normal;line-height:1.08;margin:18px 0;color:var(--green)}
+.amp{color:var(--gold);font-style:italic} .date{letter-spacing:.12em}
+.btn{display:inline-block;border:0;background:var(--green);color:white;text-decoration:none;padding:12px 24px;border-radius:3px;cursor:pointer;margin-top:16px}
+main{max-width:760px;margin:auto;padding:24px 18px 60px}
+section{padding:55px 12px;text-align:center;border-bottom:1px solid #d9cfba}
+h2{font-size:32px;font-weight:normal;color:var(--green);margin:8px 0 18px}
+.names{font-size:clamp(30px,6vw,46px);color:var(--green);line-height:1.2}
+.small{font:13px Arial,sans-serif;letter-spacing:.08em;color:#73766d}
+.card{background:#fffaf2;border:1px solid #e5dac4;padding:22px;margin:12px auto;max-width:520px}
+.countdown{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.countdown div{min-width:68px;padding:10px;background:#fffaf2;border:1px solid #e5dac4}
+.countdown strong{display:block;font-size:25px;color:var(--green)}
+footer{text-align:center;padding:28px 12px;font-size:13px;color:#73766d}
+[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="cover" id="cover">
+  <div class="frame">
+    <div class="kicker">Undangan Pernikahan</div>
+    <p>Kepada Yth. Bapak/Ibu/Saudara/i</p>
+    <p>Dengan penuh rasa syukur, kami mengundang Anda untuk hadir di hari bahagia kami.</p>
+    <h1>Alya <span class="amp">&</span><br>Raka</h1>
+    <p class="date">MINGGU, 20 DESEMBER 2026</p>
+    <button class="btn" id="openInvite">Buka Undangan</button>
+  </div>
+</div>
+
+<main id="content" hidden>
+  <section>
+    <div class="kicker">Bismillahirrahmanirrahim</div>
+    <p>Dengan memohon rahmat dan ridho Allah SWT, kami bermaksud menyelenggarakan pernikahan putra-putri kami:</p>
+    <div class="names">Alya Putri</div>
+    <p class="small">Putri dari Bapak [Nama Ayah] & Ibu [Nama Ibu]</p>
+    <h2 style="font-size:25px">&</h2>
+    <div class="names">Raka Pratama</div>
+    <p class="small">Putra dari Bapak [Nama Ayah] & Ibu [Nama Ibu]</p>
+  </section>
+
+  <section>
+    <div class="kicker">Hari istimewa kami</div><h2>Waktu & Acara</h2>
+    <div class="card"><h3>Akad Nikah</h3><p>Minggu, 20 Desember 2026<br>08.00 WIB – selesai</p></div>
+    <div class="card"><h3>Resepsi</h3><p>Minggu, 20 Desember 2026<br>11.00–14.00 WIB</p></div>
+    <div class="countdown" aria-label="Hitung mundur">
+      <div><strong id="days">--</strong><span class="small">Hari</span></div>
+      <div><strong id="hours">--</strong><span class="small">Jam</span></div>
+      <div><strong id="minutes">--</strong><span class="small">Menit</span></div>
+      <div><strong id="seconds">--</strong><span class="small">Detik</span></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="kicker">Lokasi acara</div><h2>Tempat</h2>
+    <p><strong>[Nama Gedung / Rumah]</strong><br>[Alamat lengkap, kota]</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://maps.google.com/?q=Gedung+Pernikahan">Buka Google Maps</a>
+    <p class="small">Ganti tautan di tombol dengan tautan lokasi acara yang benar.</p>
+  </section>
+
+  <section>
+    <div class="kicker">Mohon doa restu</div><h2>Konfirmasi Kehadiran</h2>
+    <p>Kehadiran dan doa restu Anda merupakan kebahagiaan bagi kami.</p>
+    <a class="btn" id="rsvp" href="#" target="_blank" rel="noopener">Konfirmasi via WhatsApp</a>
+    <p class="small">Pesan WhatsApp akan terbuka dengan teks konfirmasi yang sudah disiapkan.</p>
+  </section>
+
+  <section>
+    <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+    <p>Terima kasih atas doa dan restunya.</p>
+    <div class="names" style="font-size:30px">Alya & Raka</div>
+  </section>
+</main>
+<footer>Undangan digital • Mohon maaf apabila ada kesalahan penulisan nama dan gelar.</footer>
+
+<script>
+// GANTI DATA DI BAGIAN INI
+const weddingDate = new Date("2026-12-20T08:00:00+07:00");
+const whatsappNumber = "6281234567890"; // Ganti dengan nomor WA tuan rumah, format internasional tanpa +
+const whatsappMessage = "Halo, saya ingin konfirmasi kehadiran di pernikahan Alya & Raka.";
+document.getElementById("rsvp").href =
+  "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(whatsappMessage);
+
+document.getElementById("openInvite").addEventListener("click", () => {
+  document.getElementById("content").hidden = false;
+  document.getElementById("content").scrollIntoView({behavior:"smooth"});
+});
+
+function updateCountdown(){
+  const diff = weddingDate.getTime() - Date.now();
+  const values = diff <= 0 ? [0,0,0,0] : [
+    Math.floor(diff/86400000),
+    Math.floor(diff%86400000/3600000),
+    Math.floor(diff%3600000/60000),
+    Math.floor(diff%60000/1000)
+  ];
+  ["days","hours","minutes","seconds"].forEach((id,i)=>{
+    document.getElementById(id).textContent = String(values[i]).padStart(2,"0");
+  });
+}
+updateCountdown(); setInterval(updateCountdown,1000);
+</script>
+</body>
+</html>
